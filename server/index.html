@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Roostagram API Server Specification</title>
+
+    <style type="text/css">
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f8f8f8;
+      }
+      a {
+        text-decoration: none;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      h1 {
+        background: #3b1128;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      h3 {
+        background-color: #eaeaea;
+        padding: 10px;
+        border-bottom: 2px solid #ae99a3;
+      }
+      em {
+        color: #d24551;
+      }
+      .container {
+        max-width: 980px;
+        margin: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Roostagram API Specification</h1>
+    <div class="container">
+      <p>
+        Supports the following actions:
+        <ul>
+          <li>Get a photo</li>
+          <li>Take a photo</li>
+          <li>Delete a photo</li>
+          <li>View all photos</li>
+        </ul>
+      </p>
+
+      <h2>End Points:</h2>
+      <h3>GET <code>/photos/:id</code></h3>
+
+      <p>Returns data about a specific photo.</p>
+      <p>Example: <a href="/photos/1">/photos/1</a></p>
+      <p><em>Params:</em></p>
+      <p><code>id</code> - String. photo id</p>
+      <p><em>Responses:</em></p>
+      <p><code>200 OK</code></p>
+      <p><em>Return data:</em></p>
+      <pre><code class="lang-json">{
+    "id": "{String}",
+    "dataUri": "{String}"
+}</code></pre>
+      <p><em>Example:</em></p>
+      <pre><code class="lang-json">{
+    "id": "1",
+    "dataUri": "data:image/jpeg:base64,/9j/34thgkj...hk37"
+}</code></pre>
+      <p><code>404 NOT FOUND</code></p>
+      <p>{ "error" : "Photo not found" }</p>
+
+      <h3>POST <code>/photos</code></h3>
+      <p>Posts a new photo</p>
+      <p>Example: <code>/photos</code></p>
+      <p><em>Sent data in post body:</em></p>
+      <p>
+        String, dataUri of image.
+        Example: "data:image/jpeg:base64,/9j/34thgkj...hk37"
+      </p>
+      <p><em>Responses:</em></p>
+      <p><code>200 OK</code></p>
+      <p><em>Return data:</em></p>
+      <pre><code class="lang-json">{
+  "id": "{String}",
+  "dataUri": "{String}"
+}</code></pre>
+      <p><em>Example:</em></p>
+      <pre><code class="lang-json">{
+  "id": "12",
+  "dataUri": "data:image/jpeg:base64,/9j/34thgkj...hk37"
+}</code></pre>
+
+      <h3>GET <code>/photos</code></h3>
+      <p>Gets all the available photos</p>
+      <p>Example: <a href="/photos">/photos</a></p>
+      <p><em>Params:</em></p>
+      <p>None</p>
+      <p><em>Responses:</em></p>
+      <p><code>200 OK</code></p>
+      <pre><code class="lang-json">[
+  { "id" : "{String}", "dataUri" : "{ String }" },
+  { "id" : "{String}", "dataUri" : "{ String }" } // ...
+]</code></pre>
+      <p><em>Example:</em></p>
+      <pre><code class="lang-json">[
+  { "id" : "12", "dataUri" : "data:image/jpeg:base64,/9j/34thgkj...hk37"},
+  { "id" : "13", "dataUri" : "data:image/jpeg:base64,/3jwwreh4thgj...hfe7"} // ...
+]</code></pre>
+
+      <h3>DELETE <code>/photos/:id</code></h3>
+
+      <p>Deletes a photo</p>
+      <p>Example: <code>/photos/13</code></p>
+      <p><em>Parameters:</em></p>
+      <p><code>id</code> - photo id</p>
+      <p><em>Returned data</em></p>
+      <p><code>200 OK</code></p>
+      <pre><code class="lang-json">{ "id" : "{String}" }</code></pre>
+      <p><em>Example:</em></p>
+      <pre><code class="lang-json">{ "id" : "13" }</code></pre>
+      <p><code>404 NOT FOUND</code></p>
+      <p>{ "error" : "Photo not found" }</p>
+
+    </div>
+  </body>
+</html>

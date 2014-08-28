@@ -16,7 +16,15 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev',
     'Start a development web server.',
-    ['lint', 'connect:dev', 'watch']);
+    ['lint', 'server:dev', 'watch']);
+
+  grunt.registerTask('server',
+    'Start the REST and connect servers.',
+    function() {
+      require('./server/server');
+      grunt.task.run('connect:' + this.args.join(':'));
+    }
+  );
 
   grunt.registerTask('default', ['dev']);
 
