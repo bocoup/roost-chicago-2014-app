@@ -4,6 +4,15 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    connect: {
+      dev: {
+        options: {
+          base: ['src'],
+          port: '8000',
+          hostname: '*',
+        },
+      },
+    },
     jscs: {
       options: {
         config: '.jscsrc',
@@ -52,11 +61,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jscs');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Register alias tasks.
   grunt.registerTask('lint',
     'Statically analyze the project JavaScript for errors and code style',
     ['jscs', 'jshint']);
-  grunt.registerTask('default', ['lint', 'watch']);
+
+  grunt.registerTask('dev',
+    'Start a development web server.',
+    ['lint', 'connect:dev', 'watch']);
+
+  grunt.registerTask('default', ['dev']);
 
 };
