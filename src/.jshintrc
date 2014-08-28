@@ -1,0 +1,6 @@
+{
+  "extends": "../.jshintrc",
+  "node": false,
+  "browser": true,
+  "devel": true
+}
