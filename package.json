@@ -1,0 +1,12 @@
+{
+  "name": "roostagram",
+  "version": "1.0.0",
+  "description": "Roostagram!",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}

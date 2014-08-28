@@ -1,0 +1,6 @@
+# Note that it's considered a best practice to create a global .gitignore file
+# to ignore operating system specific files in every Git repository on your
+# computer, eg. Thumbs.db or .DS_Store.
+# https://help.github.com/articles/ignoring-files#create-a-global-gitignore
+
+/node_modules/
