@@ -1,5 +1,8 @@
-define(['backbone', 'jquery', 'underscore'], function(Backbone, $, _) {
+define(function(require) {
   'use strict';
+  var Backbone = require('backbone');
+  var $ = require('jquery');
+  var _ = require('underscore');
 
   var PhotoView = Backbone.View.extend({
 
