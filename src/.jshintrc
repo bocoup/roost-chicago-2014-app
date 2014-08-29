@@ -4,10 +4,7 @@
   "browser": true,
   "devel": true,
   "globals": {
-    "Backbone": true,
-    "$": true,
-    "Photo": true,
-    "PhotoView": true,
-    "_": true
+    "define": true,
+    "require": true
   }
 }

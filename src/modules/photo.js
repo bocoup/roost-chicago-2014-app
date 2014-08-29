@@ -1,4 +1,4 @@
-(function() {
+define(['backbone'], function(Backbone) {
   'use strict';
 
   var Photo = Backbone.Model.extend({
@@ -7,5 +7,5 @@
     }
   });
 
-  window.Photo = Photo;
-}());
+  return Photo;
+});

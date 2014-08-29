@@ -1,4 +1,4 @@
-(function() {
+define(['modules/photo', 'modules/view'], function(Photo, PhotoView) {
   'use strict';
 
   var me = new Photo({
@@ -17,4 +17,4 @@
     }
   });
 
-}());
+});

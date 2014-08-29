@@ -11,6 +11,7 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "backbone": "~1.1.2",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "requirejs": "~2.1.14"
   }
 }

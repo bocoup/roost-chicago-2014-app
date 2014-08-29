@@ -1,4 +1,4 @@
-(function() {
+define(['backbone', 'jquery', 'underscore'], function(Backbone, $, _) {
   'use strict';
 
   var PhotoView = Backbone.View.extend({
@@ -17,6 +17,5 @@
     }
   });
 
-  window.PhotoView = PhotoView;
-
-}());
+  return PhotoView;
+});
