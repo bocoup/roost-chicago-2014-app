@@ -9,9 +9,13 @@
 <body>
 
   <script type="template/text" id="photo-detail">
-    <div class="photo">
-      <img src="<%= dataUri %>"/>
-    </div>
+    <% if (typeof dataUri !== "undefined") { %>
+      <div class="photo">
+        <img src="<%= dataUri %>"/>
+      </div>
+    <% } else { %>
+      <div class="error">Photo not found!</div>
+    <% } %>
   </script>
 
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
