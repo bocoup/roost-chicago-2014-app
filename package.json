@@ -4,7 +4,8 @@
   "description": "Roostagram!",
   "private": true,
   "scripts": {
-    "test": "grunt lint"
+    "test": "grunt lint",
+    "install": "bower install"
   },
   "devDependencies": {
     "express": "^4.8.6",
