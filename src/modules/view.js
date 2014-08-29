@@ -3,12 +3,15 @@
 
   var PhotoView = Backbone.View.extend({
 
+    template: _.template($('#photo-detail').text()),
+
     render: function(){
 
-      //add to the DOM
-      $('<img>', {
-        src: this.model.get('dataUri')
-      }).appendTo(this.$el);
+      this.$el.html(
+        this.template(
+          this.model.toJSON()
+        )
+      );
 
       return this;
     }

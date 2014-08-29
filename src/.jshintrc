@@ -7,6 +7,7 @@
     "Backbone": true,
     "$": true,
     "Photo": true,
-    "PhotoView": true
+    "PhotoView": true,
+    "_": true
   }
 }

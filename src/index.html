@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="/styles/app.css">
 </head>
 <body>
+
+  <script type="template/text" id="photo-detail">
+    <div class="photo">
+      <img src="<%= dataUri %>"/>
+    </div>
+  </script>
+
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/lodash/dist/lodash.min.js"></script>
   <script src="/bower_components/backbone/backbone.js"></script>
