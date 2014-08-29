@@ -4,6 +4,8 @@
   "browser": true,
   "devel": true,
   "globals": {
-    "Backbone": true
+    "Backbone": true,
+    "$": true,
+    "Photo": true
   }
 }
