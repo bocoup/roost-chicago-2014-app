@@ -6,6 +6,7 @@
   "globals": {
     "Backbone": true,
     "$": true,
-    "Photo": true
+    "Photo": true,
+    "PhotoView": true
   }
 }
