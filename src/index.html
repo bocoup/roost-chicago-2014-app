@@ -8,16 +8,6 @@
 </head>
 <body>
 
-  <script type="template/text" id="photo-detail">
-    <% if (typeof dataUri !== "undefined") { %>
-      <div class="photo">
-        <img src="<%= dataUri %>"/>
-      </div>
-    <% } else { %>
-      <div class="error">Photo not found!</div>
-    <% } %>
-  </script>
-
   <script src="/bower_components/requirejs/require.js" data-main="/requirejs-config"></script>
 
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

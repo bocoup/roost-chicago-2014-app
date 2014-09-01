@@ -2,7 +2,7 @@ define(function(require) {
   'use strict';
 
   var Photo = require('modules/components/photo/model');
-  var PhotoView = require('modules/components/photo/view');
+  var PhotoView = require('modules/components/photo/detail');
 
   var me = new Photo({
     id : 19
