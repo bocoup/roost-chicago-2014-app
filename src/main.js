@@ -1,7 +1,8 @@
 define(function(require) {
   'use strict';
-  var Photo = require('modules/photo');
-  var PhotoView = require('modules/view');
+
+  var Photo = require('modules/components/photo/model');
+  var PhotoView = require('modules/components/photo/view');
 
   var me = new Photo({
     id : 19
