@@ -1,23 +1,39 @@
 define(function(require) {
   'use strict';
 
-  var Photo = require('modules/components/photo/model');
-  var PhotoView = require('modules/components/photo/detail');
+  //photo detail view
+  //var Photo = require('modules/components/photo/model');
+  //var PhotoView = require('modules/components/photo/detail');
+  //
+  //var me = new Photo({
+  //  id : 19
+  //});
+  //
+  //var view = new PhotoView({
+  //  model : me
+  //});
+  //
+  //view.$el.appendTo('body');
+  //
+  //me.fetch({
+  //  success: function() {
+  //    view.render();
+  //  }
+  //});
 
-  var me = new Photo({
-    id : 19
+  //photo collection view
+  var PhotoCollection = require('modules/components/photo/collection');
+  var GalleryView = require('modules/components/photo/gallery');
+
+  var photos = new PhotoCollection();
+
+  var gallery = new GalleryView({
+    collection : photos,
+    el: '#app'
   });
 
-  var view = new PhotoView({
-    model : me
-  });
-
-  view.$el.appendTo('body');
-
-  me.fetch({
-    success: function() {
-      view.render();
-    }
+  photos.fetch().then(function() {
+    gallery.render();
   });
 
 });
