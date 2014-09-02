@@ -51,18 +51,18 @@ h1 {
   margin: 0 .5em;
   width: 8em;
   cursor: pointer;
-}
 
-.btn:hover {
-  background-color: #942E37;
+  &:hover {
+    background-color: #942E37;
+  }
 }
 
 input.btn {
   color: black;
-}
 
-input.btn:hover {
-  background: #ebebeb;
+  &:hover {
+    background: #ebebeb;
+  }
 }
 
 /* ------------------ */
@@ -74,14 +74,14 @@ header {
   padding: 1.0em 0 .6em;
   margin-bottom: 10em /*3.5em*/;
   text-align: center;
-}
 
-header a {
-  display: inline-block;
-  border-top: 1px solid $header_logo_border;
-  border-bottom: 1px solid $header_logo_border;
-  padding: .2em;
-  outline-width: 0;
+  a {
+    display: inline-block;
+    border-top: 1px solid $header_logo_border;
+    border-bottom: 1px solid $header_logo_border;
+    padding: .2em;
+    outline-width: 0;
+  }
 }
 
 @media only screen and (max-width: 980px) {
@@ -135,21 +135,21 @@ header a {
   border-bottom-width: 42px;
   box-shadow: 10px 10px 35px #ccc;
   transform: rotate(3deg);
-}
 
-.photo .btn {
-  margin-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: #E7E7E7;
-  font-size: .8em;
-  color: #a3a3a3;
-  width: 11em;
-}
+  .btn {
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #E7E7E7;
+    font-size: .8em;
+    color: #a3a3a3;
+    width: 11em;
 
-.photo .btn:hover {
-  background: #CECECE;
-  color: #838383;
+    &:hover {
+      background: #CECECE;
+      color: #838383;
+    }
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -166,25 +166,25 @@ header a {
   overflow: auto;
   margin-bottom: 2em;
   list-style-type: none;
-}
 
-.thumbnails li {
-  width: 25%;
-  float: left;
-  padding: 0 0.5em;
-}
+  li {
+    width: 25%;
+    float: left;
+    padding: 0 0.5em;
+  }
 
-.thumbnails .thumbnail {
-  display: block;
-  padding: 4px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  transition: all 0.2s ease-in-out;
-}
+  .thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
 
-.thumbnails .thumbnail:hover {
-  border-color: #70425b;
+    &:hover {
+      border-color: #70425b;
+    }
+  }
 }
 
 @media only screen and (max-width: 980px) {
@@ -209,16 +209,18 @@ header a {
 /*       Webcam       */
 /* ------------------ */
 
-.webcam video {
-  width: 100%;
-  border: 2px solid #9E9E9E;
-  margin-bottom: 2em;
-  padding: 1em;
-  box-sizing: border-box;
-}
+.webcam {
+  video {
+    width: 100%;
+    border: 2px solid #9E9E9E;
+    margin-bottom: 2em;
+    padding: 1em;
+    box-sizing: border-box;
+  }
 
-.webcam canvas {
-  display: none;
+  canvas {
+    display: none;
+  }
 }
 
 /* ------------------ */
@@ -237,10 +239,10 @@ input[type='file'] {
   transition: all 0.2s ease-in-out;
   line-height: 1;
   width: 50%;
-}
 
-input[type='file']:hover {
-  border-color: #70425B;
+  &:hover {
+    border-color: #70425B;
+  }
 }
 
 @media only screen and (max-width: 420px) {
