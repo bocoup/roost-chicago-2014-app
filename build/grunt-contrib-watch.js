@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       options: {
         livereload: true,
       },
-      files: ['src/**/*.{js,css,html}'],
+      files: ['src/**/*.{js,html}', 'prod/*'],
     },
     jshintrc: {
       files: ['**/.jshintrc'],
@@ -19,6 +19,10 @@ module.exports = function(grunt) {
     scripts: {
       files: ['<%= jshint.app.src %>'],
       tasks: ['jscs', 'jshint:app'],
+    },
+    stylus: {
+      files: ['src/**/*.styl'],
+      tasks: ['stylus:dev'],
     },
   });
 
