@@ -1,15 +1,15 @@
 define(function(require) {
   'use strict';
 
-  var Backbone = require('backbone');
+  var BaseView = require('modules/core/base-view');
   var template = require('tmpl!modules/components/photo/gallery');
 
-  var GalleryView = Backbone.View.extend({
-    render: function() {
-      this.$el.html(template({
+  var GalleryView = BaseView.extend({
+    template: template,
+    serializeData: function() {
+      return {
         gallery: this.collection.toJSON()
-      }));
-      return this;
+      };
     }
   });
 

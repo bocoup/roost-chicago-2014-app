@@ -1,15 +1,14 @@
 define(function(require) {
   'use strict';
-  var Backbone = require('backbone');
+
+  var BaseView = require('modules/core/base-view');
   var template = require('tmpl!modules/components/photo/detail');
 
-  var PhotoView = Backbone.View.extend({
+  var PhotoView = BaseView.extend({
+    template: template,
 
-    render: function(){
-
-      this.$el.html(template(this.model.toJSON()));
-
-      return this;
+    serializeData: function() {
+      return this.model.toJSON();
     }
   });
 
