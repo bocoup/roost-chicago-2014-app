@@ -20,20 +20,4 @@ define(function(require) {
     var href = $(this).attr('href');
     Backbone.history.navigate(href, true);
   });
-
-  //photo collection view
-  var PhotoCollection = require('modules/components/photo/collection');
-  var GalleryView = require('modules/components/photo/gallery');
-
-  var photos = new PhotoCollection();
-
-  var gallery = new GalleryView({
-    collection : photos,
-    el: '#app'
-  });
-
-  photos.fetch().then(function() {
-    gallery.render();
-  });
-
 });

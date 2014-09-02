@@ -5,16 +5,27 @@ define(function(require) {
 
   var Photo = require('modules/components/photo/model');
   var PhotoView = require('modules/components/photo/detail');
+  var PhotoCollection = require('modules/components/photo/collection');
+  var GalleryView = require('modules/components/photo/gallery');
 
   var Router = Backbone.Router.extend({
 
     routes: {
-      '': 'hello',
+      '': 'index',
       'photos/:id': 'photo'
     },
 
-    hello: function() {
-      alert('hello Roost!');
+    index: function() {
+      var photos = new PhotoCollection();
+
+      var gallery = new GalleryView({
+        collection : photos,
+        el: '#app'
+      });
+
+      photos.fetch().then(function() {
+        gallery.render();
+      });
     },
 
     photo: function(id) {
