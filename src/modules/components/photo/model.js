@@ -1,10 +1,12 @@
 define(function(require) {
   'use strict';
+
   var Backbone = require('backbone');
+  var API = require('modules/services/api');
 
   var Photo = Backbone.Model.extend({
     urlRoot : function() {
-      return 'http://localhost:8001/photos';
+      return API.photos;
     }
   });
 

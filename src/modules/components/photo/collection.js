@@ -3,6 +3,7 @@ define(function(require) {
 
   var Backbone = require('backbone');
   var Photo = require('modules/components/photo/model');
+  var API = require('modules/services/api');
 
   var PhotoCollection = Backbone.Collection.extend({
     model: Photo,
@@ -10,7 +11,7 @@ define(function(require) {
       return (1 / model.id);
     },
     url : function() {
-      return 'http://localhost:8001/photos';
+      return API.photos;
     }
   });
 
