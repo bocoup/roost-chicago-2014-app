@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev',
     'Start a development web server.',
-    ['lint', 'server:dev', 'watch']);
+    ['lint', 'clean:prod', 'stylus:dev', 'server:dev', 'watch']);
 
   grunt.registerTask('server',
     'Start the REST and connect servers.',
