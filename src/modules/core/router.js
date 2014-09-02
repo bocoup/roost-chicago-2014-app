@@ -7,8 +7,9 @@ define(function(require) {
   var PhotoCollection = require('modules/components/photo/collection');
 
   var PhotoView = require('modules/components/photo/detail');
-  var GalleryView = require('modules/components/photo/gallery');
+
   var MainLayout = require('modules/layouts/main');
+  var IndexPage = require('modules/pages/index-page');
 
   var photos = new PhotoCollection();
 
@@ -38,18 +39,12 @@ define(function(require) {
 
     index: function() {
 
-      var self = this;
-
-      photos.fetch({
-        success: function() {
-          self.insertView({
-            name: 'GalleryView',
-            viewType: GalleryView,
-            container: '.main',
-            options: {
-              collection: photos
-            }
-          });
+      this.insertView({
+        name: 'IndexPage',
+        viewType: IndexPage,
+        container: '.main',
+        options: {
+          collection: photos
         }
       });
     },
