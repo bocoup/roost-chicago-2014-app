@@ -4,7 +4,9 @@
   <ul class="thumbnails">
     <% _.each(gallery, function(thumbnail) { %>
     <li>
-      <img src="<%= thumbnail.dataUri %>" alt="">
+      <a href="#photos/<%= thumbnail.id %>" class="thumbnail">
+        <img src="<%= thumbnail.dataUri %>" alt="">
+      </a>
     </li>
     <% }); %>
   </ul>

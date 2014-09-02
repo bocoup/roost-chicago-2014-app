@@ -5,11 +5,16 @@ define(function(require) {
   var Router = Backbone.Router.extend({
 
     routes: {
-      '': 'hello'
+      '': 'hello',
+      'photos/:id': 'photo'
     },
 
     hello: function() {
       alert('hello Roost!');
+    },
+
+    photo: function(id) {
+      alert('photo id #' + id);
     }
   });
 
