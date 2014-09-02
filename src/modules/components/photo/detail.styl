@@ -1,0 +1,34 @@
+/* ------------------ */
+/*    Photo Detail    */
+/* ------------------ */
+
+.photo {
+  display: inline-block;
+  max-width: 40%;
+  background: white;
+  border: 12px solid #fff;
+  border-bottom-width: 42px;
+  box-shadow: 10px 10px 35px #ccc;
+  transform: rotate(3deg);
+
+  .btn {
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #E7E7E7;
+    font-size: .8em;
+    color: #a3a3a3;
+    width: 11em;
+
+    &:hover {
+      background: #CECECE;
+      color: #838383;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .photo {
+    max-width: 80%;
+  }
+}
