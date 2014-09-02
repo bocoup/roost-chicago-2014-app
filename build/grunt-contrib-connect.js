@@ -1,5 +1,7 @@
 'use strict';
 
+var middleware = require('./connect/middleware').dev;
+
 module.exports = function(grunt) {
   grunt.config.set('connect', {
     dev: {
@@ -7,6 +9,7 @@ module.exports = function(grunt) {
         base: ['src', '.'],
         port: '8000',
         hostname: '*',
+        middleware: middleware,
       },
     },
   });
