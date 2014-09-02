@@ -1,6 +1,12 @@
 define(function(require) {
   'use strict';
 
+  var Backbone = require('backbone');
+  require('modules/core/router');
+
+  Backbone.history.start();
+
+
   //photo detail view
   //var Photo = require('modules/components/photo/model');
   //var PhotoView = require('modules/components/photo/detail');
