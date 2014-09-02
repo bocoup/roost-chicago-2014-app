@@ -3,13 +3,11 @@ define(function(require) {
 
   var Backbone = require('backbone');
 
-  var Photo = require('modules/components/photo/model');
   var PhotoCollection = require('modules/components/photo/collection');
-
-  var PhotoView = require('modules/components/photo/detail');
 
   var MainLayout = require('modules/layouts/main');
   var IndexPage = require('modules/pages/index-page');
+  var PhotoPage = require('modules/pages/photo-page');
 
   var photos = new PhotoCollection();
 
@@ -50,22 +48,13 @@ define(function(require) {
     },
 
     photo: function(id) {
-      var self = this;
-
-      var me = new Photo({
-        id : id
-      });
-
-      me.fetch({
-        success: function() {
-          self.insertView({
-            name: 'PhotoView',
-            viewType: PhotoView,
-            container: '.main',
-            options: {
-              model : me
-            }
-          });
+      this.insertView({
+        name: 'PhotoPage',
+        viewType: PhotoPage,
+        container: '.main',
+        options: {
+          collection: photos,
+          modelId: id
         }
       });
     }
