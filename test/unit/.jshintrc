@@ -6,6 +6,7 @@
     "suite": true,
     "test": true,
     "setup": true,
-    "assert": true
+    "assert": true,
+    "sinon": true
   }
 }
