@@ -14,6 +14,12 @@ module.exports = function(grunt) {
       },
       src: 'src/**/*.js',
     },
+    test: {
+      options: {
+        jshintrc: 'test/unit/.jshintrc'
+      },
+      src: 'test/unit/tests/*.js',
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');

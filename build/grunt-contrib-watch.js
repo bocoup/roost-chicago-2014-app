@@ -24,6 +24,10 @@ module.exports = function(grunt) {
       files: ['src/**/*.styl'],
       tasks: ['stylus:dev'],
     },
+    tests: {
+      files: ['test/unit/**/*'],
+      tasks: ['jscs', 'jshint:test', 'mocha'],
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');

@@ -13,10 +13,13 @@ module.exports = function(grunt) {
   grunt.registerTask('lint',
     'Statically analyze the project JavaScript for errors and code style',
     ['jscs', 'jshint']);
+  grunt.registerTask('test-unit',
+    'Run the unit tests in a headless browser',
+    ['lint', 'mocha']);
 
   grunt.registerTask('dev',
     'Start a development web server.',
-    ['lint', 'clean:prod', 'stylus:dev', 'server:dev', 'watch']);
+    ['test-unit', 'clean:prod', 'stylus:dev', 'server:dev', 'watch']);
 
   grunt.registerTask('server',
     'Start the REST and connect servers.',

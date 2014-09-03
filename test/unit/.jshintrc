@@ -1,0 +1,10 @@
+{
+  "extends": "../../.jshintrc",
+  "browser": true,
+  "globals": {
+    "define": true,
+    "suite": true,
+    "test": true,
+    "assert": true
+  }
+}
