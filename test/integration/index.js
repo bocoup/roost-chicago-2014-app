@@ -84,5 +84,24 @@ suite('Roostagram', function() {
         'Thumbnails for previously-created images persist.'
       );
     });
+
+    test.skip('delete photo', function() {
+      var thumbnails;
+
+      driver.findElement(css('.thumbnail')).click();
+      wait.until(
+        expectedConditions.elementToBeClickable(css('.photo'))
+      );
+      driver.findElement(css('.delete button')).click();
+      wait.until(
+        expectedConditions.elementToBeClickable(css('.thumbnail'))
+      );
+      thumbnails = driver.findElements(css('.thumbnail'));
+      assert.equal(
+        thumbnails.length,
+        this.initThumbCount,
+        'Thumnails for deleted images are removed.'
+      );
+    });
   });
 });
