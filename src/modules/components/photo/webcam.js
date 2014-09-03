@@ -13,18 +13,14 @@ define(function(require) {
       this.collection = options.collection;
     },
 
-    // Override the default implementation of `destroy` to avoid a known bug in
-    // Google Chrome that keeps the camera running even after destroying the
-    // video element. Call the original implementation to preserve expected
-    // behavior.
-    destroy: function() {
+    // Avoid a known bug in Google Chrome that keeps the camera running even
+    // after destroying the video element.
+    preDestroy: function() {
       var video = this.$('video')[0];
 
       if (video) {
         video.src = undefined;
       }
-
-      return BaseView.prototype.destroy.apply(this, arguments);
     },
 
     filterAndSave: function() {

@@ -59,6 +59,24 @@ define(['modules/core/base-view'], function(BaseView) {
 
         assert.equal(this.view.$el.contents().length, 0);
       });
+
+      test(
+        'invokes custom `preDestroy` hook prior to emptying the view',
+        function() {
+          var view = this.view;
+          view.template = sinon.stub().returns('<p>');
+
+          sinon.stub(this.view, 'preDestroy', function() {
+            assert.equal(view.$('p').length, 1);
+          });
+
+          view.render();
+          this.view.destroy();
+
+          sinon.assert.callCount(this.view.preDestroy, 1);
+          assert.equal(view.$('p').length, 0);
+        }
+      );
     });
   });
 });

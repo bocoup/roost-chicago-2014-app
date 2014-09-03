@@ -7,7 +7,13 @@ define(function(require) {
 
   var BaseView = Backbone.View.extend({
 
+    preDestroy: function() {},
+
     destroy: function() {
+      // In case an instance has specialized logic for cleaning itself up,
+      // invoke the `preDestroy` hook before any actual destruction occurs.
+      this.preDestroy();
+
       this.stopListening();
       this.$el.empty();
 

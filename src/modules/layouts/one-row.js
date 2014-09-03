@@ -22,14 +22,10 @@ define(function(require) {
       return this;
     },
 
-    // Override the default implementation of `destroy` to remove the element's
-    // class. Call the original implementation to preserve expected behavior.
-    destroy: function() {
-      // remove the container class name before we empty
-      // the element.
+    // remove the container class name before we empty
+    // the element.
+    preDestroy: function() {
       this.$el.removeClass('single');
-
-      return BaseLayout.prototype.destroy.call(this, arguments);
     }
   });
 

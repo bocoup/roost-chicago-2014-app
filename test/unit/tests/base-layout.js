@@ -91,6 +91,21 @@ define(function(require) {
 
         sinon.assert.callCount(this.subView.destroy, 1);
       });
+
+      test(
+        'Invokes the `preDestroy` method prior to removing the layout element',
+        function() {
+          var layout = this.layout;
+          layout.render();
+          sinon.stub(layout, 'preDestroy', function() {
+            assert.equal(layout.$('.b').length, 1);
+          });
+
+          layout.destroy();
+
+          sinon.assert.callCount(layout.preDestroy, 1);
+        }
+      );
     });
   });
 });
