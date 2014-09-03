@@ -9,6 +9,7 @@ define(function(require) {
   var IndexPage = require('modules/pages/index-page');
   var PhotoPage = require('modules/pages/photo-page');
   var UploadPage = require('modules/pages/upload-page');
+  var WebcamPage = require('modules/pages/webcam-page');
 
   var photos = new PhotoCollection();
 
@@ -24,7 +25,8 @@ define(function(require) {
     routes: {
       '': 'index',
       'photos/:id': 'photo',
-      'upload': 'upload'
+      'upload': 'upload',
+      'webcam': 'webcam'
     },
 
     insertView: function(page) {
@@ -76,6 +78,14 @@ define(function(require) {
       // gallery view
       this.listenTo(uploadView, 'uploaded', function(ev) {
         self.navigate('', { trigger: true });
+      });
+    },
+
+    webcam: function() {
+      this.insertView({
+        name: 'WebcamPage',
+        viewType: WebcamPage,
+        container: '.main'
       });
     }
   });
