@@ -8,6 +8,7 @@ define(function(require) {
   var MainLayout = require('modules/layouts/main');
   var IndexPage = require('modules/pages/index-page');
   var PhotoPage = require('modules/pages/photo-page');
+  var UploadPage = require('modules/pages/upload-page');
 
   var photos = new PhotoCollection();
 
@@ -22,7 +23,8 @@ define(function(require) {
 
     routes: {
       '': 'index',
-      'photos/:id': 'photo'
+      'photos/:id': 'photo',
+      'upload': 'upload'
     },
 
     insertView: function(page) {
@@ -56,6 +58,24 @@ define(function(require) {
           collection: photos,
           modelId: id
         }
+      });
+    },
+
+    upload: function() {
+      var self = this;
+      var uploadView = this.insertView({
+        name: 'UploadPage',
+        viewType: UploadPage,
+        container: '.main',
+        options: {
+          collection: photos
+        }
+      });
+
+      // when the upload is done, navigate back to our
+      // gallery view
+      this.listenTo(uploadView, 'uploaded', function(ev) {
+        self.navigate('', { trigger: true });
       });
     }
   });
