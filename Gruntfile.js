@@ -10,16 +10,22 @@ module.exports = function(grunt) {
   grunt.loadTasks('build');
 
   // Register alias tasks.
+  grunt.registerTask('setup-dev',
+    'Prepare development environment',
+    ['test-unit', 'clean:prod', 'stylus:dev', 'server:dev']);
   grunt.registerTask('lint',
     'Statically analyze the project JavaScript for errors and code style',
     ['jscs', 'jshint']);
   grunt.registerTask('test-unit',
     'Run the unit tests in a headless browser',
     ['lint', 'mocha']);
+  grunt.registerTask('test-integration',
+    'Run integration tests in a real browser',
+    ['setup-dev', 'spawn:mochaTest']);
 
   grunt.registerTask('dev',
     'Start a development web server.',
-    ['test-unit', 'clean:prod', 'stylus:dev', 'server:dev', 'watch']);
+    ['setup-dev', 'watch']);
 
   grunt.registerTask('server',
     'Start the REST and connect servers.',

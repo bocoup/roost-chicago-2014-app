@@ -8,7 +8,8 @@ module.exports = function(grunt) {
     all: [
       '<%= jshint.build.src %>',
       '<%= jshint.app.src %>',
-      '<%= jshint.test.src %>',
+      '<%= jshint["test-unit"].src %>',
+      '<%= jshint["test-integration"].src %>',
     ],
   });
 
