@@ -85,7 +85,10 @@ define(function(require) {
       this.insertView({
         name: 'WebcamPage',
         viewType: WebcamPage,
-        container: '.main'
+        container: '.main',
+        options: {
+          collection: photos
+        }
       });
     }
   });
