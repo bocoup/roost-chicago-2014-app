@@ -6,13 +6,13 @@ define(function(require) {
 
   var WebcamPage = TwoRowLayout.extend({
     afterRender: function() {
-      this.addSubView({
+      var captureView = this.addSubView({
         name: 'ToolsCaptureView',
         viewType: ToolsCaptureView,
         container: '.top-row'
       });
 
-      this.addSubView({
+      var webcamView = this.addSubView({
         name: 'WebcamView',
         viewType: WebcamView,
         container: '.content',
@@ -22,6 +22,11 @@ define(function(require) {
       });
 
       TwoRowLayout.prototype.afterRender.call(this);
+
+      captureView.on('requestCapture', webcamView.filterAndSave, webcamView);
+      webcamView.on('uploaded', function() {
+        this.trigger('uploaded');
+      }, this);
     }
   });
 

@@ -82,13 +82,19 @@ define(function(require) {
     },
 
     webcam: function() {
-      this.insertView({
+      var webcamView = this.insertView({
         name: 'WebcamPage',
         viewType: WebcamPage,
         container: '.main',
         options: {
           collection: photos
         }
+      });
+
+      // when the upload is done, navigate back to our
+      // gellery view
+      this.listenTo(webcamView, 'uploaded', function() {
+        this.navigate('', { trigger: true });
       });
     }
   });
