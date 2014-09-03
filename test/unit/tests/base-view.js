@@ -14,7 +14,7 @@ define(['modules/core/base-view'], function(BaseView) {
 
         this.view.render();
 
-        assert.equal(this.view.afterRender.callCount, 1);
+        sinon.assert.callCount(this.view.afterRender, 1);
       });
 
       test('correctly sets the markup according to the template', function() {
@@ -34,7 +34,7 @@ define(['modules/core/base-view'], function(BaseView) {
 
           this.view.render();
 
-          assert.equal(this.view.template.args[0][0], expectedData);
+          sinon.assert.calledWith(this.view.template, expectedData);
         }
       );
     });
@@ -48,7 +48,7 @@ define(['modules/core/base-view'], function(BaseView) {
         this.view.destroy();
         view2.trigger('sample-event');
 
-        assert.equal(handler.callCount, 0);
+        sinon.assert.callCount(handler, 0);
       });
 
       test('container element is emptied', function() {
