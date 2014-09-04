@@ -23,6 +23,9 @@ module.exports = function(grunt) {
     'Run integration tests in a real browser',
     ['setup-dev', 'spawn:mochaTest']);
 
+  grunt.registerTask('prod',
+    'Compile for production.',
+    ['test-unit', 'clean:prod', 'jade:prod']);
   grunt.registerTask('dev',
     'Start a development web server.',
     ['setup-dev', 'watch']);
