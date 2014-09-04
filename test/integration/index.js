@@ -85,7 +85,7 @@ suite('Roostagram', function() {
       );
     });
 
-    test.skip('delete photo', function() {
+    test('delete photo', function() {
       var thumbnails;
 
       driver.findElement(css('.thumbnail')).click();

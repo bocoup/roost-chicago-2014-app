@@ -1,6 +1,9 @@
 <% if (typeof dataUri !== "undefined") { %>
   <div class="photo">
     <img src="<%= dataUri %>"/>
+    <div class="delete">
+      <button class="btn">Delete</button>
+    </div>
   </div>
 <% } else { %>
   <div class="error">Photo not found!</div>

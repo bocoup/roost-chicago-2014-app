@@ -52,7 +52,7 @@ define(function(require) {
     },
 
     photo: function(id) {
-      this.insertView({
+      var photoPage = this.insertView({
         name: 'PhotoPage',
         viewType: PhotoPage,
         container: '.main',
@@ -60,6 +60,10 @@ define(function(require) {
           collection: photos,
           modelId: id
         }
+      });
+
+      this.listenTo(photoPage, 'deleted', function() {
+        this.navigate('', { trigger: true });
       });
     },
 

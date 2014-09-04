@@ -28,6 +28,10 @@ define(function(require) {
           });
 
           detailView.update();
+
+          self.listenTo(detailView, 'deleted', function() {
+            self.trigger('deleted');
+          });
         }
       });
     }
