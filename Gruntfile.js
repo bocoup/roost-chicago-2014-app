@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     'Compile for production.',
     [
       'test-unit', 'clean:prod', 'jade:prod', 'stylus:prod', 'requirejs',
-      'server:prod'
+      'copy:prod', 'server:prod'
     ]);
   grunt.registerTask('dev',
     'Start a development web server.',
