@@ -12,7 +12,7 @@ module.exports = function(grunt) {
   // Register alias tasks.
   grunt.registerTask('setup-dev',
     'Prepare development environment',
-    ['test-unit', 'clean:prod', 'stylus:dev', 'server:dev']);
+    ['test-unit', 'clean:prod', 'jade:dev', 'stylus:dev', 'server:dev']);
   grunt.registerTask('lint',
     'Statically analyze the project JavaScript for errors and code style',
     ['jscs', 'jshint']);

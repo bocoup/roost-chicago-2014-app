@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Roostagram!
+    link(rel='stylesheet', href='/app.css')
+  body
+    #app
+    script(src='/bower_components/requirejs/require.js', data-main='/requirejs-config')
+    script.
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
