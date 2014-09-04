@@ -9,6 +9,9 @@ module.exports = function(grunt) {
         insertRequire: ['main'],
         name: 'bower_components/almond/almond',
         out: 'prod/app.js',
+        optimize: 'uglify2',
+        generateSourceMaps: true,
+        preserveLicenseComments: false,
         // Because we override the application `baseUrl` to be the root of the
         // projuct during the build (see above), the paths to the `main` script
         // and the `modules` directory has to be modified to include `src/`.
