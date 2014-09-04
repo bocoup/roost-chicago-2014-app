@@ -14,6 +14,7 @@
     "lodash": "~2.4.1",
     "requirejs": "~2.1.14",
     "lodash-template-loader": "~0.1.6",
-    "vintagejs": "~1.1.4"
+    "vintagejs": "~1.1.4",
+    "almond": "~0.3.0"
   }
 }
