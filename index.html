@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>Roost by Bocoup</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700"
+      rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT"
+      type="text/css">
+    <style type="text/css">
+      body {font-family: Open Sans, Helvetica, Arial, sans-serif;}
+      code {background-color: #f1f1f1; padding: 1px; border: #dddde0 solid 1px;}
+      h1 {font-family: "OFL Sorts Mill Goudy TT", serif;}
+      h2, h3 {color: rgb(97, 97, 97); font-weight: 100;}
+      h3{display: inline;}
+      nav {background-color: rgb(234, 234, 234); margin: 0; padding: 10px;
+        font-size: 14px; text-transform: uppercase; font-weight: 600;
+        min-height: 50px;}
+      nav a {text-decoration: none; color: rgb(97, 97, 97);}
+      nav li {display:inline; padding: 10px 20px;}
+      .download {margin-left: 30px;}
+      .instructor-img {float: left; margin: 0 2em 2em 0;}
+      .instructor-info {vertical-align: top; display: inline-block;
+        padding: 20px; width: 45%;}
+      .schedule-day {float: left; width: 33%;}
+      #instructor {width: 100%;}
+      #intro {position: relative;}
+      #schedule {overflow: auto;}
+      #slides-and-code > ol > li {margin-bottom: 1em;}
+      #logo {background: transparent url("http://roost.bocoup.com/img/logo.png")
+        no-repeat scroll 0 0; width: 252px; height: 251px; position: absolute;
+        right: 20px; top: 20px;}
+      section {border-bottom-color: rgb(218, 218, 218);
+        border-bottom-width: 1px; border-bottom-style: solid; padding: 20px;
+        margin: 0;}
+      section:nth-child(odd) {background-color: rgb(249, 249, 249);}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#links">Useful Links</a></li>
+        <li><a href="#slides-and-code">Slides and Code</a></li>
+        <li><a href="#instructor">Instructor Information</a></li>
+      </ul>
+    </nav>
+    <section id="intro">
+      <div id="logo"></div>
+      <h1>Roost by Bocoup</h1>
+      <h2>Concepts Covered</h2>
+      <ul>
+        <li>Web Application Architecture</li>
+        <li>The Model-View-Controller Pattern</li>
+        <li>Breaking Down Requirements</li>
+        <li>Setting Up a Project</li>
+        <li>Using Grunt in Your Workflow</li>
+        <li>Basics of Backbone.js</li>
+        <li>Retrieving Data from a Server with Models</li>
+        <li>Creating Application Views</li>
+        <li>Modularizing Code with AMD/RequireJS</li>
+        <li>Rendering Entire Collections of Data</li>
+        <li>Abstracting Reusable Functionality</li>
+        <li>Using a CSS Preprocessor</li>
+        <li>Uploading Data to a Server</li>
+        <li>Using Modern APIs with Graceful Degradation</li>
+        <li>Unit and Integration Testing</li>
+        <li>Optimizing Your Production Build</li>
+      </ul>
+    </section>
+    <section id="links">
+      <h2>Useful Links</h2>
+      <ul>
+        <li><a href="http://roost.bocoup.com/">Roost Website</a></li>
+        <li><a
+          href="http://bocoup-education.github.io/roost-chicago-2014-slides/">All
+          Slides</a></li>
+        <li><a href="#">Roostagram on GitHub</a></li>
+      </ul>
+    </section>
+    <section id="slides-and-code">
+      <h2>Slides and Code</h2>
+      <h3>Day 1</h3>
+      <ol>
+        <li>
+          <h3>Introduction to Web Applications and the MVC Pattern</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/02.what_makes_up_a_web_app.html"
+            class="download">Slides</a>
+          <p>An overview of architectural principles in building web
+            applications. We'll also talk about how the Model-View-Controller
+            (MVC) pattern translates to web applications.</p>
+        </li>
+        <li>
+          <h3>Breaking Down Requirements</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/03.requirements.html"
+            class="download">Slides</a>
+          <p>We'll receive requirements for our application from our client. But
+            before we dive into coding, we'll show how we break those
+            requirements down in to discrete tasks, impose engineering standards
+            on ourselves, and translate all of those requirements into something
+            a developer can understand.</p>
+        </li>
+        <li>
+          <h3>Building the App, Part 1: Getting Started</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/04.getting_started.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/01-getting-started.zip"
+            class="download">Completed Code</a>
+          <p>We'll take what we've learned from our requirements and what we
+          know about application architecture to set up our project folders and
+          core files, automated task runner (Grunt), and source control
+          (Git).</p>
+        </li>
+        <li>
+          <h3>Introduction to Backbone</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/05.intro_to_backbone.html"
+            class="download">Slides</a>
+          <p>We have chosen Backbone as the framework to express the application
+          we will build. We'll talk about how Backbone conforms to and/or alters
+          the MVC pattern we discussed earlier.</p>
+        </li>
+        <li>
+          <h3>REST Server</h3><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/02-rest-server.zip"
+            class="download">Provided Code</a>
+        </li>
+        <li>
+          <h3>Building the App, Part 2: Our First Model</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/061.create_single_photo_model.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/03-our-first-model.zip"
+            class="download">Completed Code</a>
+          <p>We'll create a model, and set it up to communicate with our API
+            endpoint.</p>
+        </li>
+        <li>
+          <h3>Building the App, Part 3: Our First View</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/062.create_single_photo_view.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/04-our-first-view.zip"
+            class="download">Completed Code</a>
+          <p>We'll create a view, set connect it to our model, and see how it
+            all looks together on the page!</p>
+        </li>
+        <li>
+          <h3>Modularizing Code with AMD/RequireJS</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/07.requirejs.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/05-modularizing-code.zip"
+            class="download">Completed Code</a>
+          <p>Large JavaScript applications can quickly become unwieldy if we
+            keep all of our code in a single file. On the other hand, juggling
+            dozens of &lt;script&gt; tags leads to what is commonly known as
+            "dependency hell." We'll show how we can prevent both of these
+            outcomes with a healthy dose of vitamin AMD.</p>
+        </li>
+        <li>
+          <h3>Building the App, Part 4: Adding a Collection</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/08.create_photo_gallery.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/06-adding-collection.zip"
+            class="download">Completed Code</a>
+          <p>We've pulled a single piece of data into our app, but we're often
+            going to want to pull in a number of objects. We'll talk about the
+            things we need to consider when rendering an entire collection of
+            data to the page. We also need a way to move between all of these
+            pages we've created, so we'll wire up our client-side URL
+            routing.</p>
+        </li>
+        <li>
+          <h3>Building the App, Part 5: Wiring it Together</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/09.wiring_and_layout.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/07-wiring-together.zip"
+            class="download">Completed Code</a>
+          <p>At this point, we're successfully getting data into our application
+            and rendering our pages, but we've created some redundant code.
+            We'll finish up the day by refactoring our current codebase to keep
+            things DRY (Don't Repeat Yourself).</p>
+        </li>
+      </ol>
+      <h3>Day 2</h3>
+      <ol>
+        <li>
+          <h3>Recap</h3>
+          <p>What the heck happened yesterday? We'll recap the high points and
+            set up today's sessions.</p>
+        </li>
+        <li>
+          <h3>CSS</h3><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/08-css.zip"
+            class="download">Provided Code</a>
+        </li>
+        <li>
+          <h3>Improving Your Styling Workflow</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/11.intro_to_stylus.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/09-stylus.zip"
+            class="download">Completed Code</a>
+          <p>Our designer gave us a ton of great styles for our app! How do we
+            use a modular approach in creating our style sheets, handle browser
+            differences, and keep from repeating code? We'll use a framework
+            (Stylus) to keep ourselves in line!</p>
+        </li>
+        <li>
+          <h3>Building the App, Part 6: Handling Form Data</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/121.upload_a_photo.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/10-handling-form-data.zip"
+            class="download">Completed Code</a>
+          <p>So far, our app reads data from the server pretty nicely. How do we
+            get data from the user into the server? We'll talk about form input
+            and how to handle that in our application.</p>
+        </li>
+        <li>
+          <h3>Building the App, Part 7: Using Modern APIs</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/122.take_a_photo.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/11-get-user-media.zip"
+            class="download">Completed Code</a>
+          <p>Form data is great and all, but what if we want to use snazzy new
+            browser features? We'll talk about how we use HTML5 APIs like
+            <code>navigator.getUserMedia</code>, and how to implement graceful
+            degradation in browsers that do not support features we may want to
+            use.</p>
+        </li>
+        <li>
+          <h3>Unit Testing</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/13.unit_testing.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/12-unit-testing.zip"
+            class="download">Completed Code</a>
+          <p>Unit testing is an integral part of writing stable software. We'll
+            talk about why it's important, when to test, and how we do it in
+            JavaScript using Mocha, Chai, and Sinon.</p>
+        </li>
+        <li>
+          <h3>Integration Testing</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/15.integration_testing.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/13-integration-testing.zip"
+            class="download">Completed Code</a>
+          <p>Sometimes unit testing just isn't enough, particularly in the
+            browser environment. We'll start test-driving using browser
+            automation with Selenium, and learn how to write tests that navigate
+            through the connected pieces of our app.</p>
+        </li>
+        <li>
+          <h3>Building the App, Part 8: Deleting Data</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/14.delete_photo.html"
+            class="download">Slides</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/14-deleting-data.zip"
+            class="download">Completed Code</a>
+          <p>Our app can read and write data, but now we want to let our users
+            delete it. If we follow the principles we've learned up to this
+            point, it should be a piece of cake…</p>
+        </li>
+        <li>
+          <h3>Optimizing the Application</h3><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/16.optimization.html"
+            class="download">Slides1</a><a
+            href="http://bocoup-education.github.io/roost-chicago-2014-slides/17.deployment.html"
+            class="download">Slides2</a><a
+            href="https://github.com/bocoup-education/roost-chicago-2014-app/archive/15-optimizing.zip"
+            class="download">Completed Code</a>
+          <p>Even if our application completely works, we're not done yet. We
+            need to optimize our application for the production environment and
+            transfer over the Internet. We'll cover some simple things we can do
+            to improve performance and the deployment process.</p>
+        </li>
+      </ol>
+
+    </section>
+
+    <div id="instructor">
+      <h2>Instructor Information</h2>
+      <div class="instructor-info">
+        <h3>Ben Alman</h3>
+        <p>
+          <img class="instructor-img"
+            src="http://roost.bocoup.com/img/speaker_ben.jpg">Ben Alman is the
+            author of numerous jQuery plugins and open source projects such as
+            Grunt, the popular task-based command line build tool for JavaScript
+            projects. He also writes and presents at conferences around the
+            world.
+        </p>
+        <ul>
+          <li>Twitter: <a href="http://twitter.com/cowboy">@cowboy</a></li>
+          <li>GitHub: <a href="http://github.com/cowboy">cowboy</a></li>
+          <li>Email: <a href="mailto:ben@bocoup.com">ben@bocoup.com</a></li>
+        </ul>
+      </div>
+      <div class="instructor-info">
+        <h3>Irene Ros</h3>
+        <p>
+          <img class="instructor-img"
+          src="http://roost.bocoup.com/img/speaker_irene.jpg">Irene is a
+          JavaScript developer, occasionally venturing into the lands of Ruby on
+          Rails and node.js. When she isn’t contributing or writing about
+          Backbone.js, she’s working on projects that focus on creating engaging
+          interactive visual displays of information.
+        </p>
+        <ul>
+          <li>Twitter: <a href="http://twitter.com/ireneros">@ireneros</a></li>
+          <li>GitHub: <a href="http://github.com/iros">iros</a></li>
+          <li>Email: <a href="mailto:irene@bocoup.com">irene@bocoup.com</a></li>
+        </ul>
+      </div>
+      <div class="instructor-info">
+        <h3>Mike Pennisi</h3>
+        <p>
+          <img class="instructor-img"
+            src="http://roost.bocoup.com/img/speaker_mike.jpg">Mike Pennisi is a
+            contributor to a number of open source projects, including JSHint,
+            Socket.io, and Backbone.LayoutManager. His primary interests at
+            Bocoup are user interface design, privacy and peer to peer
+            networking on the Open Web.
+        </p>
+        <ul>
+          <li>Twitter: <a
+            href="http://twitter.com/jugglinmike">@jugglinmike</a></li>
+          <li>GitHub: <a
+            href="http://github.com/jugglinmike">jugglinmike</a></li>
+          <li>Email: <a href="mailto:mike@bocoup.com">mike@bocoup.com</a></li>
+        </ul>
+      </div>
+      <div class="instructor-info">
+        <h3>Ashley Williams</h3>
+        <p>
+          <img class="instructor-img"
+            src="http://roost.bocoup.com/img/speaker_ashley.jpg">Ashley is a
+            former NYC Teaching Fellow, former lead instructor of the Flatiron
+            School’s NYC Web Development Fellowship, and current instructor at
+            Bocoup. Ashley pairs a wealth of education background with a passion
+            and prowess for web development.
+        </p>
+        <ul>
+          <li>Twitter: <a href="http://twitter.com/ag_dubs">@ag_dubs</a></li>
+          <li>GitHub: <a
+            href="http://github.com/ashleygwilliams">ashleygwilliams</a></li>
+          <li>Email: <a
+            href="mailto:ashley@bocoup.com">ashley@bocoup.com</a></li>
+        </ul>
+      </div>
+      <div class="instructor-info">
+        <h2>About Bocoup</h2>
+        <p>Bocoup is an Open Web technology company by and for programmers. We
+          create new Open Web technologies and help them become viable through
+          consulting, training and community development. We research next
+          generation browser technologies, implement software for clients, run
+          events workshops and training and contribute to numerous open source
+          projects.</p>
+        <ul>
+          <li>Web: <a href="http://bocoup.com">Bocoup.com</a></li>
+          <li>Twitter: <a href="http://twitter.com/bocoup">@bocoup</a> &amp; <a
+            href="http://twitter.com/BocoupEd">@BocoupEd</a></li>
+          <li>GitHub: <a href="http://github.com/bocoup">bocoup</a> &amp; <a
+            href="http://github.com/bocoup-edcuation">bocoup-education</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
