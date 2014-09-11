@@ -98,6 +98,7 @@ define(function(require) {
       // when the upload is done, navigate back to our
       // gellery view
       this.listenTo(webcamView, 'uploaded', function() {
+        webcamView.destroy();
         this.navigate('', { trigger: true });
       });
     }
