@@ -19,6 +19,7 @@ define(function(require) {
       var video = this.$('video')[0];
 
       if (video) {
+        gum.stopStream(video);
         video.src = undefined;
       }
     },
